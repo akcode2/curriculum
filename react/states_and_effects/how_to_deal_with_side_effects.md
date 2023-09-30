@@ -212,7 +212,7 @@ Let us address a few cases where `useEffect` does not need to be used.
     }
     ~~~
 
-*   You do not need an effect to reset the state based on a condition most of the time. You have learned about keys in React. Just like using a key on a list's item, adding one to a component, based on the state on which it should be reset creates a unique version of that component for each change in the value of the state.
+*   You do not need an effect to reset the state based on a condition most of the time. You have learned about keys in React. Just like you can use keys on a list's items, you can use keys to create distinct versions of a component based on a state. This technique allows you to reset a component based on a state.
 
 *   If you are having issues with managing your state and want to use an effect to update the state of a parent or some other non-child component, consider <span id="lifting-the-state">**lifting the state**.</span> As we know, in React, the state flows in one direction, generally down the DOM. So the parents know of the data before passing it to the children. If multiple children are required to make use of a single state, it should be moved up to the parent that has all of the components that need it, instead of using escape hatches like an effect.
 
